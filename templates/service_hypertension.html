@@ -1,0 +1,281 @@
+{% extends 'base.html' %}
+
+{% block title %}High Blood Pressure Treatment in Sylhet | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_title %}High Blood Pressure Treatment in Sylhet | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_description %}Hypertension and heart health care in Sylhet. Blood pressure control, risk assessment and preventive guidance.{% endblock %}
+
+{% block content %}
+<!-- Page Header & Breadcrumb -->
+<section class="bg-gradient-to-b from-rose-50 to-white py-10 sm:py-14 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+    
+    <!-- Breadcrumb: Home / Services / Hypertension & Heart Health -->
+    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500" aria-label="Breadcrumb">
+      <a href="{{ url_for('index') }}" class="hover:text-teal-600 transition flex items-center gap-1">
+        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+        <span>Home</span>
+      </a>
+      <span class="text-slate-400">/</span>
+      <a href="{{ url_for('services') }}" class="hover:text-teal-600 transition">Services</a>
+      <span class="text-slate-400">/</span>
+      <span class="text-rose-700 font-bold">Hypertension &amp; Heart Health</span>
+    </nav>
+
+    <!-- Heading & Subheading -->
+    <div class="space-y-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-100 text-rose-800 text-xs font-bold uppercase tracking-wider">
+        <i data-lucide="heart" class="w-4 h-4 text-rose-700"></i>
+        <span>Cardiovascular &amp; Arterial Care</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        Hypertension &amp; Heart Health
+      </h1>
+      <p class="text-base sm:text-xl text-rose-800 font-medium max-w-3xl">
+        Protect your heart with early and consistent care.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Main Service Content Section -->
+<section class="py-14 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Column: Detailed Service Guide -->
+      <div class="lg:col-span-8 space-y-12">
+        
+        <!-- Overview Section -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-extrabold text-slate-900">Overview</h2>
+          <div class="p-6 rounded-2xl bg-rose-50/70 border border-rose-100 text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
+            High blood pressure often has no symptoms, yet it is a major risk factor for stroke, heart disease and kidney problems. Regular checks and proper control can prevent serious complications.
+          </div>
+        </div>
+
+        <!-- What We Treat -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2.5">
+            <i data-lucide="check-circle" class="w-6 h-6 text-rose-600"></i>
+            <span>What We Treat</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="heart" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">High Blood Pressure</h3>
+                <p class="text-xs text-slate-600 mt-1">Essential hypertension, isolated systolic pressure, and resistant hypertension.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="activity" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Blood Pressure Fluctuations</h3>
+                <p class="text-xs text-slate-600 mt-1">Sudden spikes, white-coat hypertension, and unstable postural variations.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-alert" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Cholesterol &amp; Lipid Disorders</h3>
+                <p class="text-xs text-slate-600 mt-1">High LDL cholesterol, hypertriglyceridemia, and arterial plaque prevention.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="heart-pulse" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Lifestyle-Related Heart Risk</h3>
+                <p class="text-xs text-slate-600 mt-1">Cardiovascular risk reduction for smokers, desk workers, and sedentary patients.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Warning Signs -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2.5">
+            <i data-lucide="alert-triangle" class="w-6 h-6 text-rose-600"></i>
+            <span>Warning Signs</span>
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200/80 text-center space-y-2">
+              <i data-lucide="frown" class="w-6 h-6 text-rose-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Frequent headaches</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200/80 text-center space-y-2">
+              <i data-lucide="compass" class="w-6 h-6 text-rose-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Dizziness</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200/80 text-center space-y-2">
+              <i data-lucide="heart" class="w-6 h-6 text-rose-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Chest discomfort</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200/80 text-center space-y-2">
+              <i data-lucide="wind" class="w-6 h-6 text-rose-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Shortness of breath</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200/80 text-center space-y-2 sm:col-span-2 md:col-span-1">
+              <i data-lucide="eye" class="w-6 h-6 text-rose-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Blurred vision</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Our Approach -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2.5">
+            <i data-lucide="clipboard-list" class="w-6 h-6 text-rose-600"></i>
+            <span>Our Approach</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-rose-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-rose-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                1
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Accurate blood pressure assessment</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Standardized readings taken after resting, validated against home monitoring records.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-rose-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-rose-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                2
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Risk evaluation and necessary tests</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Cardiovascular risk stratification, lipid profiling, ECG, and kidney function analysis.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-rose-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-rose-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                3
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Medication tailored to your needs</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Optimal anti-hypertensive regimen chosen for maximum protection of your kidneys and brain.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-rose-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-rose-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                4
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Salt, diet and exercise guidance</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Practical sodium reduction techniques suited for Bangladeshi meals, DASH diet, and daily brisk walking.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-rose-300 transition space-y-2 sm:col-span-2">
+              <div class="w-9 h-9 rounded-xl bg-rose-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                5
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Regular follow-up</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Continual pressure monitoring, timely dose titrations, and ongoing reassurance to maintain optimal arterial protection.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Sidebar Quick Booking & Doctor Box -->
+      <div class="lg:col-span-4 space-y-6">
+        
+        <!-- Sticky Appointment Card -->
+        <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+          <div class="space-y-2">
+            <span class="inline-block px-3 py-1 bg-rose-100 text-rose-800 text-xs font-bold rounded-lg uppercase">
+              Chamber Consultation
+            </span>
+            <h3 class="text-xl font-extrabold text-slate-900">Dr. Tanvir Ahmed Chowdhury</h3>
+            <p class="text-xs text-rose-700 font-bold">MBBS, FCPS (Medicine), MD (Endocrinology)</p>
+          </div>
+
+          <div class="space-y-3 text-xs text-slate-600 pt-3 border-t border-slate-200">
+            <div class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-rose-600 shrink-0"></i>
+              <span>Popular Medical Centre, Room 304, Zindabazar, Sylhet</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-rose-600 shrink-0"></i>
+              <span>Sat – Thu: 4:30 PM – 9:30 PM</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-rose-600 shrink-0"></i>
+              <span>Hotline: +880 1700-000000</span>
+            </div>
+          </div>
+
+          <div class="pt-2 space-y-2">
+            <!-- CTA: Book a Heart Health Consultation -->
+            <button type="button" data-service="Hypertension & Heart Health" class="open-booking-modal-btn w-full py-4 px-4 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm shadow-lg transition flex items-center justify-center gap-2">
+              <i data-lucide="calendar-check" class="w-4 h-4"></i>
+              <span>Book a Heart Health Consultation</span>
+            </button>
+            <a href="tel:+8801700000000" class="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs border border-slate-200 transition flex items-center justify-center gap-2">
+              <i data-lucide="phone-call" class="w-4 h-4 text-rose-600"></i>
+              <span>Call Assistant Directly</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Related Health Tips Article Box -->
+        <div class="p-6 rounded-3xl bg-rose-50 border border-rose-100 space-y-3">
+          <span class="text-[11px] font-bold text-rose-800 uppercase tracking-wider block">Recommended Reading</span>
+          <h4 class="font-bold text-slate-900 text-sm">The Silent Killer: How to Keep Your Blood Pressure in the Safe Zone</h4>
+          <p class="text-xs text-slate-600">Discover practical sodium moderation and lifestyle habits that protect your arteries.</p>
+          <a href="{{ url_for('article_detail', slug='the-silent-killer-blood-pressure') }}" class="text-xs font-bold text-rose-700 hover:text-rose-900 flex items-center gap-1 pt-1">
+            <span>Read Article</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bottom Full CTA Banner -->
+<section class="py-14 bg-rose-950 text-white text-center">
+  <div class="max-w-4xl mx-auto px-4 space-y-4">
+    <h2 class="text-2xl sm:text-3xl font-extrabold">Ready to take control of your blood pressure?</h2>
+    <p class="text-rose-200 text-sm max-w-xl mx-auto">
+      Protect your heart, kidneys, and brain with personalized medical evaluation in Sylhet.
+    </p>
+    <div class="pt-2">
+      <button type="button" data-service="Hypertension & Heart Health" class="open-booking-modal-btn px-8 py-3.5 rounded-xl bg-white text-rose-900 font-extrabold text-sm shadow-xl hover:bg-rose-50 transition">
+        Book a Heart Health Consultation
+      </button>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+

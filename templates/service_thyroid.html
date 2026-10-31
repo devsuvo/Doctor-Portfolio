@@ -1,0 +1,276 @@
+{% extends 'base.html' %}
+
+{% block title %}Thyroid Treatment in Sylhet | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_title %}Thyroid Treatment in Sylhet | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_description %}Diagnosis and long-term treatment of thyroid disorders in Sylhet including hypothyroidism, hyperthyroidism and thyroid nodules.{% endblock %}
+
+{% block content %}
+<!-- Page Header & Breadcrumb -->
+<section class="bg-gradient-to-b from-sky-50 to-white py-10 sm:py-14 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+    
+    <!-- Breadcrumb: Home / Services / Thyroid Disorders -->
+    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500" aria-label="Breadcrumb">
+      <a href="{{ url_for('index') }}" class="hover:text-teal-600 transition flex items-center gap-1">
+        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+        <span>Home</span>
+      </a>
+      <span class="text-slate-400">/</span>
+      <a href="{{ url_for('services') }}" class="hover:text-teal-600 transition">Services</a>
+      <span class="text-slate-400">/</span>
+      <span class="text-sky-700 font-bold">Thyroid Disorders</span>
+    </nav>
+
+    <!-- Heading & Subheading -->
+    <div class="space-y-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider">
+        <i data-lucide="shield-plus" class="w-4 h-4 text-sky-700"></i>
+        <span>Endocrine &amp; Hormonal Care</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        Thyroid Disorders
+      </h1>
+      <p class="text-base sm:text-xl text-sky-800 font-medium max-w-3xl">
+        Balanced thyroid, balanced life.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Main Service Content Section -->
+<section class="py-14 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Column: Detailed Service Guide -->
+      <div class="lg:col-span-8 space-y-12">
+        
+        <!-- Overview Section -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-extrabold text-slate-900">Overview</h2>
+          <div class="p-6 rounded-2xl bg-sky-50/70 border border-sky-100 text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
+            The thyroid gland controls your metabolism, energy and mood. When it is underactive or overactive, it can affect your whole body. Early diagnosis and proper treatment bring most patients back to normal life.
+          </div>
+        </div>
+
+        <!-- What We Treat -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2.5">
+            <i data-lucide="check-circle" class="w-6 h-6 text-sky-600"></i>
+            <span>What We Treat</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-plus" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Hypothyroidism</h3>
+                <p class="text-xs text-slate-600 mt-1">Underactive thyroid, Hashimoto's thyroiditis, and sluggish metabolism.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-plus" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Hyperthyroidism</h3>
+                <p class="text-xs text-slate-600 mt-1">Overactive thyroid gland, Graves' disease, and elevated metabolism.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-plus" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Thyroid Nodules and Goitre</h3>
+                <p class="text-xs text-slate-600 mt-1">Neck swellings, thyroid ultrasound correlation, and nodular monitoring.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-plus" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Thyroid Problems During Pregnancy</h3>
+                <p class="text-xs text-slate-600 mt-1">Hormonal calibration safeguarding fetal cognitive and maternal health.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Common Symptoms -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2.5">
+            <i data-lucide="alert-circle" class="w-6 h-6 text-sky-600"></i>
+            <span>Common Symptoms</span>
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            
+            <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-200/80 text-center space-y-2">
+              <i data-lucide="scale" class="w-6 h-6 text-sky-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Unexplained weight gain or loss</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-200/80 text-center space-y-2">
+              <i data-lucide="battery-low" class="w-6 h-6 text-sky-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Tiredness and weakness</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-200/80 text-center space-y-2">
+              <i data-lucide="sparkles" class="w-6 h-6 text-sky-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Hair loss and dry skin</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-200/80 text-center space-y-2">
+              <i data-lucide="thermometer" class="w-6 h-6 text-sky-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Feeling too cold or too hot</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-200/80 text-center space-y-2">
+              <i data-lucide="calendar" class="w-6 h-6 text-sky-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Irregular periods</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-200/80 text-center space-y-2">
+              <i data-lucide="disc" class="w-6 h-6 text-sky-700 mx-auto"></i>
+              <span class="text-xs font-bold text-slate-900 block">Swelling in the neck</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Our Approach -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2.5">
+            <i data-lucide="clipboard-list" class="w-6 h-6 text-sky-600"></i>
+            <span>Our Approach</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-sky-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-sky-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                1
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Clinical evaluation and thyroid profile testing</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Precise evaluation of TSH, Free T3, and Free T4, correlating laboratory numbers with physical symptoms.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-sky-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-sky-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                2
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Correct medicine and dose</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Personalized Levothyroxine or anti-thyroid prescription tailored precisely to your metabolic weight.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-sky-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-sky-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                3
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Regular monitoring and dose adjustment</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Scheduled surveillance to prevent overtreatment, maintaining stable hormone equilibrium.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-sky-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-sky-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                4
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Lifestyle and diet advice</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Practical nutritional guidance on iodine, selenium, calcium absorption, and healthy weight management.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Sidebar Quick Booking & Doctor Box -->
+      <div class="lg:col-span-4 space-y-6">
+        
+        <!-- Sticky Appointment Card -->
+        <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+          <div class="space-y-2">
+            <span class="inline-block px-3 py-1 bg-sky-100 text-sky-800 text-xs font-bold rounded-lg uppercase">
+              Chamber Consultation
+            </span>
+            <h3 class="text-xl font-extrabold text-slate-900">Dr. Tanvir Ahmed Chowdhury</h3>
+            <p class="text-xs text-sky-700 font-bold">MBBS, FCPS (Medicine), MD (Endocrinology)</p>
+          </div>
+
+          <div class="space-y-3 text-xs text-slate-600 pt-3 border-t border-slate-200">
+            <div class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-sky-600 shrink-0"></i>
+              <span>Popular Medical Centre, Room 304, Zindabazar, Sylhet</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-sky-600 shrink-0"></i>
+              <span>Sat – Thu: 4:30 PM – 9:30 PM</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-sky-600 shrink-0"></i>
+              <span>Hotline: +880 1700-000000</span>
+            </div>
+          </div>
+
+          <div class="pt-2 space-y-2">
+            <!-- CTA: Book a Thyroid Consultation -->
+            <button type="button" data-service="Thyroid Disorders" class="open-booking-modal-btn w-full py-4 px-4 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm shadow-lg transition flex items-center justify-center gap-2">
+              <i data-lucide="calendar-check" class="w-4 h-4"></i>
+              <span>Book a Thyroid Consultation</span>
+            </button>
+            <a href="tel:+8801700000000" class="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs border border-slate-200 transition flex items-center justify-center gap-2">
+              <i data-lucide="phone-call" class="w-4 h-4 text-sky-600"></i>
+              <span>Call Assistant Directly</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Related Health Tips Article Box -->
+        <div class="p-6 rounded-3xl bg-sky-50 border border-sky-100 space-y-3">
+          <span class="text-[11px] font-bold text-sky-800 uppercase tracking-wider block">Recommended Reading</span>
+          <h4 class="font-bold text-slate-900 text-sm">Hypothyroidism vs Hyperthyroidism: Subtle Symptoms You Shouldn't Ignore</h4>
+          <p class="text-xs text-slate-600">Unexplained fatigue or sudden weight changes? Learn how thyroid hormones influence your health.</p>
+          <a href="{{ url_for('article_detail', slug='hypothyroidism-vs-hyperthyroidism') }}" class="text-xs font-bold text-sky-700 hover:text-sky-900 flex items-center gap-1 pt-1">
+            <span>Read Article</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bottom Full CTA Banner -->
+<section class="py-14 bg-sky-900 text-white text-center">
+  <div class="max-w-4xl mx-auto px-4 space-y-4">
+    <h2 class="text-2xl sm:text-3xl font-extrabold">Ready to balance your thyroid hormones?</h2>
+    <p class="text-sky-100 text-sm max-w-xl mx-auto">
+      Get unhurried evaluation, precise dose calibration, and compassionate care close to home in Sylhet.
+    </p>
+    <div class="pt-2">
+      <button type="button" data-service="Thyroid Disorders" class="open-booking-modal-btn px-8 py-3.5 rounded-xl bg-white text-sky-900 font-extrabold text-sm shadow-xl hover:bg-sky-50 transition">
+        Book a Thyroid Consultation
+      </button>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+

@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+
+{% block title %}Weight Management Clinic in Sylhet | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_title %}Weight Management Clinic in Sylhet | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_description %}Medically supervised weight loss programs in Sylhet focused on metabolic health, nutrition and sustainable results.{% endblock %}
+
+{% block content %}
+<!-- Page Header & Breadcrumb -->
+<section class="bg-gradient-to-b from-emerald-50 to-white py-10 sm:py-14 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+    
+    <!-- Breadcrumb: Home / Services / Obesity & Weight Management -->
+    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500" aria-label="Breadcrumb">
+      <a href="{{ url_for('index') }}" class="hover:text-teal-600 transition flex items-center gap-1">
+        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+        <span>Home</span>
+      </a>
+      <span class="text-slate-400">/</span>
+      <a href="{{ url_for('services') }}" class="hover:text-teal-600 transition">Services</a>
+      <span class="text-slate-400">/</span>
+      <span class="text-emerald-700 font-bold">Obesity &amp; Weight Management</span>
+    </nav>
+
+    <!-- Heading & Subheading -->
+    <div class="space-y-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider">
+        <i data-lucide="scale" class="w-4 h-4 text-emerald-700"></i>
+        <span>Metabolic Wellness &amp; Nutrition</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        Obesity &amp; Weight Management
+      </h1>
+      <p class="text-base sm:text-xl text-emerald-800 font-medium max-w-3xl">
+        Healthy weight loss, done the right way.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Main Service Content Section -->
+<section class="py-14 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Column: Detailed Service Guide -->
+      <div class="lg:col-span-8 space-y-12">
+        
+        <!-- Overview Section -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-extrabold text-slate-900">Overview</h2>
+          <div class="p-6 rounded-2xl bg-emerald-50/70 border border-emerald-100 text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
+            Excess weight is linked to diabetes, high blood pressure and joint problems. Our programs focus on safe, gradual and lasting weight loss, with no crash diets and no unrealistic promises.
+          </div>
+        </div>
+
+        <!-- What We Address -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2.5">
+            <i data-lucide="check-circle" class="w-6 h-6 text-emerald-600"></i>
+            <span>What We Address</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="scale" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Obesity and Overweight</h3>
+                <p class="text-xs text-slate-600 mt-1">Elevated BMI, central visceral fat, and body composition optimization.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="activity" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Weight Gain Linked to Hormonal Conditions</h3>
+                <p class="text-xs text-slate-600 mt-1">Endocrine evaluation for hypothyroidism, PCOS, and cortisol imbalances.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-alert" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Metabolic Syndrome</h3>
+                <p class="text-xs text-slate-600 mt-1">Insulin resistance, fatty liver disease (NAFLD), and lipid irregularities.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 hover-lift">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="heart-pulse" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-base">Weight Management Alongside Diabetes or Thyroid Conditions</h3>
+                <p class="text-xs text-slate-600 mt-1">Safe caloric planning designed to stabilize glucose while shedding excess fat.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Interactive BMI & South Asian Risk Tool -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white space-y-5">
+          <div class="space-y-1">
+            <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider">
+              Self Assessment Tool
+            </span>
+            <h3 class="text-xl sm:text-2xl font-bold">Calculate Your BMI &amp; Metabolic Risk</h3>
+            <p class="text-xs sm:text-sm text-slate-300">
+              South Asian physiology develops metabolic strain at a BMI of 23.0+. Check your current score:
+            </p>
+          </div>
+
+          <form id="bmi-calculator-form" class="space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-200 uppercase mb-1">Weight (kg)</label>
+                <input type="number" id="bmi-weight" step="0.5" required placeholder="e.g. 74" class="w-full px-3.5 py-2.5 rounded-xl bg-white/90 text-slate-900 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-200 uppercase mb-1">Height (cm)</label>
+                <input type="number" id="bmi-height" step="1" required placeholder="e.g. 170" class="w-full px-3.5 py-2.5 rounded-xl bg-white/90 text-slate-900 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
+              </div>
+            </div>
+            
+            <button type="submit" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition flex items-center justify-center gap-2">
+              <i data-lucide="calculator" class="w-4 h-4"></i>
+              <span>Calculate BMI &amp; Risk</span>
+            </button>
+
+            <!-- Result Card -->
+            <div id="bmi-result-card" class="hidden mt-4 pt-4 border-t border-white/15 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-slate-300">Your Body Mass Index:</span>
+                <span id="bmi-score" class="text-2xl font-black text-emerald-300">--</span>
+              </div>
+              <div>
+                <span id="bmi-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-white text-slate-900">Normal</span>
+              </div>
+              <p id="bmi-advice" class="text-xs text-slate-200 leading-relaxed"></p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Our Approach -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2.5">
+            <i data-lucide="clipboard-list" class="w-6 h-6 text-emerald-600"></i>
+            <span>Our Approach</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-emerald-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                1
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Complete evaluation including hormonal and metabolic tests</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Thyroid profile, fasting insulin, HbA1c, and lipid assessment to uncover biological weight barriers.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-emerald-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                2
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Realistic and personalized goal setting</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Gradual 5% to 10% weight reduction targets that significantly reverse chronic disease risk.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-emerald-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                3
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Practical diet plan suited to local food habits</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Portion moderation adapted to Bangladeshi meals (rice, lentils, fish) without extreme starvation.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-emerald-300 transition space-y-2">
+              <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                4
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Activity guidance</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Sustainable physical movement and joint-friendly exercise suited for your daily schedule and fitness level.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-emerald-300 transition space-y-2 sm:col-span-2">
+              <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                5
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Regular monitoring and motivation</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Ongoing follow-up visits, body measurement tracking, and continuous encouragement to keep weight off long term.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Sidebar Quick Booking & Doctor Box -->
+      <div class="lg:col-span-4 space-y-6">
+        
+        <!-- Sticky Appointment Card -->
+        <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+          <div class="space-y-2">
+            <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-lg uppercase">
+              Chamber Consultation
+            </span>
+            <h3 class="text-xl font-extrabold text-slate-900">Dr. Tanvir Ahmed Chowdhury</h3>
+            <p class="text-xs text-emerald-700 font-bold">MBBS, FCPS (Medicine), MD (Endocrinology)</p>
+          </div>
+
+          <div class="space-y-3 text-xs text-slate-600 pt-3 border-t border-slate-200">
+            <div class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Popular Medical Centre, Room 304, Zindabazar, Sylhet</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Sat – Thu: 4:30 PM – 9:30 PM</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Hotline: +880 1700-000000</span>
+            </div>
+          </div>
+
+          <div class="pt-2 space-y-2">
+            <!-- CTA: Book a Weight Management Consultation -->
+            <button type="button" data-service="Obesity & Weight Management" class="open-booking-modal-btn w-full py-4 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg transition flex items-center justify-center gap-2">
+              <i data-lucide="calendar-check" class="w-4 h-4"></i>
+              <span>Book a Weight Management Consultation</span>
+            </button>
+            <a href="tel:+8801700000000" class="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs border border-slate-200 transition flex items-center justify-center gap-2">
+              <i data-lucide="phone-call" class="w-4 h-4 text-emerald-600"></i>
+              <span>Call Assistant Directly</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Helpful Chamber Tips Box -->
+        <div class="p-6 rounded-3xl bg-emerald-50 border border-emerald-100 space-y-3">
+          <span class="text-[11px] font-bold text-emerald-800 uppercase tracking-wider block">Evidence-Based Medicine</span>
+          <h4 class="font-bold text-slate-900 text-sm">No Crash Diets or Magic Pills</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Sustainable fat loss requires metabolic harmony. We address insulin resistance, liver health, and thyroid balance for permanent wellness.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bottom Full CTA Banner -->
+<section class="py-14 bg-emerald-950 text-white text-center">
+  <div class="max-w-4xl mx-auto px-4 space-y-4">
+    <h2 class="text-2xl sm:text-3xl font-extrabold">Ready for healthy, sustainable weight loss?</h2>
+    <p class="text-emerald-200 text-sm max-w-xl mx-auto">
+      Start your medically supervised metabolic transformation with Dr. Tanvir Ahmed Chowdhury in Sylhet.
+    </p>
+    <div class="pt-2">
+      <button type="button" data-service="Obesity & Weight Management" class="open-booking-modal-btn px-8 py-3.5 rounded-xl bg-white text-emerald-900 font-extrabold text-sm shadow-xl hover:bg-emerald-50 transition">
+        Book a Weight Management Consultation
+      </button>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+

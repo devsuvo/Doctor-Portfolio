@@ -1,0 +1,253 @@
+{% extends 'base.html' %}
+
+{% block title %}Frequently Asked Questions | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_title %}Frequently Asked Questions | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_description %}Answers to common questions about appointments, consultations, fees and treatment at Dr. Tanvir Ahmed Chowdhury's chamber in Sylhet.{% endblock %}
+
+{% block content %}
+<!-- ═══ PAGE HEADER & BREADCRUMB ═══ -->
+<section class="bg-gradient-to-b from-teal-50 to-white py-10 sm:py-14 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+    <!-- Breadcrumb: Home / FAQ -->
+    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500" aria-label="Breadcrumb">
+      <a href="{{ url_for('index') }}" class="hover:text-teal-600 transition flex items-center gap-1">
+        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+        <span>Home</span>
+      </a>
+      <span class="text-slate-400">/</span>
+      <span class="text-teal-700 font-bold">FAQ</span>
+    </nav>
+
+    <!-- Heading & Subheading -->
+    <div class="space-y-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 text-teal-800 text-xs font-bold uppercase tracking-wider">
+        <i data-lucide="help-circle" class="w-4 h-4"></i>
+        <span>Patient Help Centre</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 font-medium">
+        Everything you need to know before your visit.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Accordion / Content Section -->
+<section class="py-14 sm:py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+    
+    <!-- ═══ CATEGORY 1: APPOINTMENTS ═══ -->
+    <div class="space-y-6">
+      <div class="flex items-center gap-3 pb-3 border-b border-slate-200">
+        <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+        </div>
+        <h2 class="text-2xl font-extrabold text-slate-900">Appointments</h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Q1 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>Do I need an appointment?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> Appointments are recommended to reduce waiting time, but walk-in patients are also seen as schedule permits.
+          </p>
+        </div>
+
+        <!-- Q2 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>How do I book an appointment?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> You can use the appointment form on this website or call the chamber during visiting hours.
+          </p>
+        </div>
+
+        <!-- Q3 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>Can I reschedule or cancel my appointment?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> Yes. Please inform the chamber at least a few hours in advance by phone.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══ CATEGORY 2: FIRST VISIT ═══ -->
+    <div class="space-y-6">
+      <div class="flex items-center gap-3 pb-3 border-b border-slate-200">
+        <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold">
+          <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+        </div>
+        <h2 class="text-2xl font-extrabold text-slate-900">First Visit</h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Q4 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>What should I bring to my first visit?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> Please bring previous prescriptions, test reports and a list of medicines you are currently taking.
+          </p>
+        </div>
+
+        <!-- Q5 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>How long does a consultation take?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> A typical consultation takes 15 to 20 minutes so that every concern is properly addressed.
+          </p>
+        </div>
+
+        <!-- Q6 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>Should I come fasting?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> Only if you have been asked to do a fasting blood test. Otherwise you may eat normally.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══ CATEGORY 3: TREATMENT ═══ -->
+    <div class="space-y-6">
+      <div class="flex items-center gap-3 pb-3 border-b border-slate-200">
+        <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold">
+          <i data-lucide="stethoscope" class="w-5 h-5"></i>
+        </div>
+        <h2 class="text-2xl font-extrabold text-slate-900">Treatment</h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Q7 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>Can diabetes be cured?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> Type 2 diabetes cannot usually be cured, but it can be controlled very well, and in some cases it can go into remission with lifestyle change and proper treatment.
+          </p>
+        </div>
+
+        <!-- Q8 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>Will I need to take medicine for life?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> It depends on the condition. Some problems need short-term treatment while others need long-term control. Your doctor will explain clearly.
+          </p>
+        </div>
+
+        <!-- Q9 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>Do you recommend unnecessary tests?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> No. Tests are advised only when clinically needed.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══ CATEGORY 4: ONLINE & OTHER ═══ -->
+    <div class="space-y-6">
+      <div class="flex items-center gap-3 pb-3 border-b border-slate-200">
+        <div class="w-9 h-9 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+        </div>
+        <h2 class="text-2xl font-extrabold text-slate-900">Online &amp; Other</h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Q10 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>Is online consultation available?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> Yes, follow-up consultations are available by phone or video for existing patients.
+          </p>
+        </div>
+
+        <!-- Q11 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>Are my medical records kept private?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> Yes. Patient privacy and confidentiality are always respected.
+          </p>
+        </div>
+
+        <!-- Q12 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-teal-300 transition">
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg flex items-start gap-2.5">
+            <span class="text-teal-600 font-extrabold">Q:</span>
+            <span>Is this website a substitute for medical advice?</span>
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed pl-6">
+            <strong class="text-teal-800">A:</strong> No. The information on this website is for general awareness. Please consult a doctor for personal medical advice.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CTA: STILL HAVE QUESTIONS? ═══ -->
+<section class="py-14 sm:py-20 bg-teal-800 text-white text-center">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+      Still have questions? Contact us.
+    </h2>
+    <p class="text-teal-100 text-base sm:text-lg max-w-xl mx-auto">
+      Our chamber reception is ready to help you with serial bookings and test inquiries.
+    </p>
+    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="{{ url_for('contact') }}" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-teal-900 font-extrabold text-sm shadow-xl hover:bg-teal-50 transition">
+        Contact Chamber Reception
+      </a>
+      <button type="button" class="open-booking-modal-btn w-full sm:w-auto px-8 py-3.5 rounded-xl bg-teal-900/80 hover:bg-teal-900 text-white font-bold text-sm border border-teal-400/30 transition">
+        Book Appointment
+      </button>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+

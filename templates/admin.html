@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% block title %}Reception & Chamber Dashboard | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+
+{% block content %}
+<section class="py-12 bg-slate-100 min-h-[85vh]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    
+    <!-- Top Dashboard Header -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-teal-600 text-white flex items-center justify-center">
+          <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold text-slate-900">Chamber Reception Dashboard</h1>
+          <p class="text-xs text-slate-500">Live Serial Management • Dr. Tanvir Ahmed Chowdhury (Sylhet)</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <button type="button" class="open-booking-modal-btn px-4 py-2.5 bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold rounded-xl transition flex items-center gap-2">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+          <span>Add New Patient Serial</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Stats Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-xs">
+        <span class="text-xs font-bold text-slate-400 uppercase">Total Bookings Recorded</span>
+        <div class="text-3xl font-extrabold text-teal-700 mt-1">{{ appointments | length }}</div>
+      </div>
+      <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-xs">
+        <span class="text-xs font-bold text-slate-400 uppercase">Inquiries Received</span>
+        <div class="text-3xl font-extrabold text-sky-700 mt-1">{{ contacts | length }}</div>
+      </div>
+      <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-xs">
+        <span class="text-xs font-bold text-slate-400 uppercase">Chamber Status</span>
+        <div class="text-sm font-bold text-emerald-600 mt-2 flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Open Today (4:30 PM - 9:30 PM)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booked Patients Table -->
+    <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="users" class="w-5 h-5 text-teal-600"></i>
+          <span>Patient Serial Appointments</span>
+        </h2>
+        <span class="text-xs font-semibold text-slate-500">{{ appointments | length }} records</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-50 text-slate-600 text-xs uppercase font-bold border-b border-slate-100">
+            <tr>
+              <th class="py-3 px-4">Ref Code</th>
+              <th class="py-3 px-4">Patient Name</th>
+              <th class="py-3 px-4">Phone</th>
+              <th class="py-3 px-4">Date &amp; Slot</th>
+              <th class="py-3 px-4">Service</th>
+              <th class="py-3 px-4">Type</th>
+              <th class="py-3 px-4">Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
+            {% if appointments %}
+              {% for apt in appointments %}
+              <tr class="hover:bg-slate-50/80">
+                <td class="py-3.5 px-4 font-mono font-bold text-teal-800 text-xs">
+                  <a href="{{ url_for('appointment_confirmation', ref_code=apt.ref_code) }}" class="hover:underline">
+                    {{ apt.ref_code }}
+                  </a>
+                </td>
+                <td class="py-3.5 px-4 font-bold text-slate-900">{{ apt.patient_name }}</td>
+                <td class="py-3.5 px-4">
+                  <a href="tel:{{ apt.phone }}" class="text-teal-700 hover:underline">{{ apt.phone }}</a>
+                </td>
+                <td class="py-3.5 px-4">
+                  <span class="block text-slate-900 font-semibold">{{ apt.appointment_date }}</span>
+                  <span class="text-xs text-slate-500">{{ apt.time_slot }}</span>
+                </td>
+                <td class="py-3.5 px-4 text-xs font-semibold text-slate-800">{{ apt.service_type }}</td>
+                <td class="py-3.5 px-4 text-xs">{{ apt.patient_type }}</td>
+                <td class="py-3.5 px-4">
+                  <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                    {{ apt.status }}
+                  </span>
+                </td>
+              </tr>
+              {% endfor %}
+            {% else %}
+              <tr>
+                <td colspan="7" class="py-8 text-center text-slate-400">
+                  No appointments registered yet. Click "Add New Patient Serial" to test.
+                </td>
+              </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Contact Inquiries Table -->
+    <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="mail" class="w-5 h-5 text-teal-600"></i>
+          <span>Recent Contact Messages</span>
+        </h2>
+        <span class="text-xs font-semibold text-slate-500">{{ contacts | length }} inquiries</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-50 text-slate-600 text-xs uppercase font-bold border-b border-slate-100">
+            <tr>
+              <th class="py-3 px-4">Sender</th>
+              <th class="py-3 px-4">Phone</th>
+              <th class="py-3 px-4">Subject</th>
+              <th class="py-3 px-4">Message</th>
+              <th class="py-3 px-4">Date</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
+            {% if contacts %}
+              {% for msg in contacts %}
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 font-bold text-slate-900">{{ msg.name }}</td>
+                <td class="py-3 px-4 text-teal-700">{{ msg.phone }}</td>
+                <td class="py-3 px-4 font-semibold text-xs">{{ msg.subject }}</td>
+                <td class="py-3 px-4 text-xs text-slate-600 max-w-xs truncate">{{ msg.message }}</td>
+                <td class="py-3 px-4 text-xs text-slate-400">{{ msg.created_at }}</td>
+              </tr>
+              {% endfor %}
+            {% else %}
+              <tr>
+                <td colspan="5" class="py-8 text-center text-slate-400">
+                  No contact messages yet.
+                </td>
+              </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="clinicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="glassTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ccfbf1" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0.4" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" rx="24" fill="url(#clinicGrad)" />
+  
+  <!-- Modern Building Exterior Architectural Lines -->
+  <rect x="80" y="70" width="440" height="330" rx="12" fill="#334155" opacity="0.4" />
+  <rect x="110" y="100" width="380" height="300" rx="8" fill="#1e293b" />
+
+  <!-- Center Signage: Popular Medical Centre -->
+  <rect x="150" y="40" width="300" height="65" rx="10" fill="#0d9488" />
+  <text x="300" y="70" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">POPULAR MEDICAL CENTRE</text>
+  <text x="300" y="90" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="500" fill="#ccfbf1" text-anchor="middle">Zindabazar Point, Sylhet • Room 304 (3rd Floor)</text>
+
+  <!-- Windows Grid with soft interior illumination -->
+  <g fill="#38bdf8" opacity="0.25">
+    <rect x="140" y="130" width="60" height="70" rx="4" />
+    <rect x="220" y="130" width="60" height="70" rx="4" />
+    <rect x="320" y="130" width="60" height="70" rx="4" />
+    <rect x="400" y="130" width="60" height="70" rx="4" />
+
+    <rect x="140" y="230" width="60" height="70" rx="4" />
+    <rect x="220" y="230" width="60" height="70" rx="4" />
+    <rect x="320" y="230" width="60" height="70" rx="4" />
+    <rect x="400" y="230" width="60" height="70" rx="4" />
+  </g>
+
+  <!-- Glass Entrance Doorway -->
+  <rect x="250" y="310" width="100" height="90" rx="4" fill="url(#glassTeal)" stroke="#0d9488" stroke-width="2" />
+  <line x1="300" y1="310" x2="300" y2="400" stroke="#0d9488" stroke-width="2" />
+
+  <!-- Chamber Active Badge -->
+  <rect x="180" y="340" width="240" height="36" rx="18" fill="#0f766e" />
+  <circle cx="205" cy="358" r="6" fill="#10b981" />
+  <text x="220" y="362" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Sat - Thu: 4:30 PM - 9:30 PM</text>
+</svg>
+

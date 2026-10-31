@@ -1,0 +1,302 @@
+{% extends 'base.html' %}
+
+{% block title %}Patient Reviews | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_title %}Patient Reviews | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_description %}Read what patients say about their experience with Dr. Tanvir Ahmed Chowdhury in Sylhet.{% endblock %}
+
+{% block content %}
+<!-- ═══ PAGE HEADER & BREADCRUMB ═══ -->
+<section class="bg-gradient-to-b from-teal-50 to-white py-10 sm:py-14 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+    <!-- Breadcrumb: Home / Reviews -->
+    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500" aria-label="Breadcrumb">
+      <a href="{{ url_for('index') }}" class="hover:text-teal-600 transition flex items-center gap-1">
+        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+        <span>Home</span>
+      </a>
+      <span class="text-slate-400">/</span>
+      <span class="text-teal-700 font-bold">Reviews</span>
+    </nav>
+
+    <!-- Heading & Subheading -->
+    <div class="space-y-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 text-teal-800 text-xs font-bold uppercase tracking-wider">
+        <i data-lucide="star" class="w-4 h-4 text-amber-500"></i>
+        <span>Patient Testimonials</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        Patient Reviews
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 font-medium">
+        Real experiences from the people we care for.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews & Action Section -->
+<section class="py-14 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <!-- Rating Summary Bar: 4.9 out of 5 based on 500+ reviews -->
+    <div class="p-8 sm:p-10 rounded-3xl bg-teal-900 text-white shadow-xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center text-center md:text-left">
+      <div class="md:col-span-4 space-y-1">
+        <div class="text-4xl sm:text-5xl font-black flex items-center justify-center md:justify-start gap-2">
+          <span>4.9</span>
+          <span class="text-amber-400 text-2xl sm:text-3xl">★★★★★</span>
+        </div>
+        <p class="text-teal-200 text-sm font-semibold">
+          4.9 out of 5 based on 500+ reviews
+        </p>
+      </div>
+
+      <div class="md:col-span-4 border-y md:border-y-0 md:border-x border-teal-800/80 py-4 md:py-0 md:px-6">
+        <p class="text-xs text-teal-300 uppercase tracking-wider font-bold">Patient Satisfaction</p>
+        <p class="text-sm text-teal-100 mt-1 leading-relaxed">
+          Unhurried, evidence-based consultations with dedicated follow-up care in Sylhet.
+        </p>
+      </div>
+
+      <!-- CTA Action Buttons -->
+      <div class="md:col-span-4 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center justify-center md:justify-end gap-3">
+        <a href="#share-experience" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-teal-800 hover:bg-teal-700 text-white font-bold text-xs border border-teal-600 text-center transition">
+          Share your experience
+        </a>
+        <button type="button" class="open-booking-modal-btn w-full sm:w-auto px-6 py-3 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-extrabold text-xs shadow-md transition flex items-center justify-center gap-1.5">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 8 Specific Reviews Grid -->
+    <div class="space-y-6">
+      <h2 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2">
+        <i data-lucide="message-square" class="w-6 h-6 text-teal-600"></i>
+        <span>Verified Patient Feedback</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-amber-400 text-base tracking-widest">★★★★★</span>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-teal-100 text-teal-800">Diabetes</span>
+            </div>
+            <p class="text-slate-700 italic text-sm sm:text-base leading-relaxed">
+              "I had been struggling with high sugar levels for years. After following Dr. Tanvir's plan, my numbers are finally under control. He explains everything patiently."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 text-xs font-bold text-slate-800">
+            Md. Abdul Karim, Sylhet <span class="text-slate-400 font-normal">| Diabetes</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-amber-400 text-base tracking-widest">★★★★★</span>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-sky-100 text-sky-800">Thyroid</span>
+            </div>
+            <p class="text-slate-700 italic text-sm sm:text-base leading-relaxed">
+              "Very polite and attentive doctor. He took time to understand my thyroid problem and I felt better within weeks."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 text-xs font-bold text-slate-800">
+            Farhana Akter, Zindabazar <span class="text-slate-400 font-normal">| Thyroid</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-amber-400 text-base tracking-widest">★★★★★</span>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-teal-100 text-teal-800">Diabetes</span>
+            </div>
+            <p class="text-slate-700 italic text-sm sm:text-base leading-relaxed">
+              "Highly recommended for diabetes care. The follow-up advice made a real difference for my father."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 text-xs font-bold text-slate-800">
+            Rafiul Islam, Ambarkhana <span class="text-slate-400 font-normal">| Diabetes</span>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-amber-400 text-base tracking-widest">★★★★★</span>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-rose-100 text-rose-800">Hypertension</span>
+            </div>
+            <p class="text-slate-700 italic text-sm sm:text-base leading-relaxed">
+              "My blood pressure was always high and I was scared. Doctor sir explained everything calmly and now I feel much safer."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 text-xs font-bold text-slate-800">
+            Shamsun Nahar, Subidbazar <span class="text-slate-400 font-normal">| Hypertension</span>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-amber-400 text-base tracking-widest">★★★★★</span>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800">General Medicine</span>
+            </div>
+            <p class="text-slate-700 italic text-sm sm:text-base leading-relaxed">
+              "He never rushes. I could ask all my questions and got clear answers. A rare quality in a doctor."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 text-xs font-bold text-slate-800">
+            Jahangir Alam, Mirabazar <span class="text-slate-400 font-normal">| General Medicine</span>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-amber-400 text-base tracking-widest">★★★★★</span>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-100 text-emerald-800">Weight Management</span>
+            </div>
+            <p class="text-slate-700 italic text-sm sm:text-base leading-relaxed">
+              "I lost 11 kg in 5 months with his guidance, without any extreme diet. Very grateful."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 text-xs font-bold text-slate-800">
+            Nusrat Jahan, Upashahar <span class="text-slate-400 font-normal">| Weight Management</span>
+          </div>
+        </div>
+
+        <!-- Review 7 -->
+        <div class="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-amber-400 text-base tracking-widest">★★★★★</span>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-indigo-100 text-indigo-800">General Medicine</span>
+            </div>
+            <p class="text-slate-700 italic text-sm sm:text-base leading-relaxed">
+              "Professional, humble and very knowledgeable. The whole family consults him."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 text-xs font-bold text-slate-800">
+            Kamrul Hasan, Shahjalal Upashahar <span class="text-slate-400 font-normal">| General Medicine</span>
+          </div>
+        </div>
+
+        <!-- Review 8 -->
+        <div class="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-amber-400 text-base tracking-widest">★★★★★</span>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-teal-100 text-teal-800">Diabetes</span>
+            </div>
+            <p class="text-slate-700 italic text-sm sm:text-base leading-relaxed">
+              "Online follow-up saved me a long trip. Very convenient and he still gave full attention."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 text-xs font-bold text-slate-800">
+            Sabina Yasmin, Moulvibazar <span class="text-slate-400 font-normal">| Diabetes</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══ SHARE YOUR EXPERIENCE FORM ═══ -->
+    <div id="share-experience" class="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200 max-w-3xl mx-auto space-y-6">
+      <div class="text-center space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+          <span>Feedback</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Share Your Experience</h2>
+        <p class="text-sm text-slate-600">Your feedback helps other patients make informed health choices.</p>
+      </div>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="p-4 rounded-xl {% if category == 'success' %}bg-emerald-50 text-emerald-800 border border-emerald-200{% else %}bg-rose-50 text-rose-800 border border-rose-200{% endif %} text-xs font-semibold">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <form action="{{ url_for('submit_review') }}" method="POST" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Your Name *</label>
+            <input type="text" name="patient_name" required placeholder="e.g. Md. Abdul Karim" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500 outline-none bg-white">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Location / Area *</label>
+            <input type="text" name="location" required placeholder="e.g. Zindabazar, Sylhet" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500 outline-none bg-white">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Rating</label>
+            <select name="rating" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500 outline-none bg-white">
+              <option value="5">★★★★★ - 5 Stars (Excellent)</option>
+              <option value="4">★★★★☆ - 4 Stars (Good)</option>
+              <option value="3">★★★☆☆ - 3 Stars (Average)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Condition Treated</label>
+            <select name="condition" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500 outline-none bg-white">
+              <option value="Diabetes">Diabetes</option>
+              <option value="Thyroid">Thyroid</option>
+              <option value="Hypertension">Hypertension</option>
+              <option value="Weight Management">Weight Management</option>
+              <option value="General Medicine">General Medicine</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">Your Feedback / Review *</label>
+          <textarea name="review_text" rows="3" required placeholder="Describe your experience with Dr. Tanvir's consultation, explanations, and treatment plan..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500 outline-none bg-white"></textarea>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+          <button type="submit" class="w-full sm:w-1/2 py-3.5 px-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Submit Review</span>
+          </button>
+          <button type="button" class="open-booking-modal-btn w-full sm:w-1/2 py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition flex items-center justify-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Book Appointment</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bottom Full CTA Banner -->
+<section class="py-14 bg-teal-800 text-white text-center">
+  <div class="max-w-4xl mx-auto px-4 space-y-4">
+    <h2 class="text-2xl sm:text-3xl font-extrabold">Experience unhurried medical care</h2>
+    <p class="text-teal-100 text-sm max-w-xl mx-auto">
+      Join hundreds of satisfied patients in Sylhet who trust Dr. Tanvir Ahmed Chowdhury.
+    </p>
+    <div class="pt-2">
+      <button type="button" class="open-booking-modal-btn px-8 py-3.5 rounded-xl bg-white text-teal-900 font-extrabold text-sm shadow-xl hover:bg-teal-50 transition">
+        Book Appointment
+      </button>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

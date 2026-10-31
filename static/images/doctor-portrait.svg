@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="60%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+    <linearGradient id="coatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+    <linearGradient id="tieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0a97d" />
+      <stop offset="100%" stop-color="#cc8e5e" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background Backdrop -->
+  <rect width="600" height="700" rx="36" fill="url(#bgGrad)" />
+
+  <!-- Decorative Medical Grid & Aura Circles -->
+  <circle cx="500" cy="120" r="160" fill="#ffffff" fill-opacity="0.08" />
+  <circle cx="100" cy="550" r="180" fill="#ffffff" fill-opacity="0.05" />
+
+  <!-- Medical Cross Pattern in Background -->
+  <g opacity="0.15" fill="#ffffff">
+    <path d="M480 80h40v12h-40z" />
+    <path d="M494 66h12v40h-12z" />
+    
+    <path d="M120 220h30v8h-30z" />
+    <path d="M131 209h8v30h-8z" />
+  </g>
+
+  <!-- Doctor Body Group -->
+  <g filter="url(#softShadow)">
+    <!-- Shoulders / Torso / Dark Inner Suit -->
+    <path d="M160 520 C 160 430, 230 400, 300 400 C 370 400, 440 430, 440 520 L 490 700 L 110 700 Z" fill="#0f172a" />
+
+    <!-- Light Blue Inner Shirt -->
+    <polygon points="260,400 340,400 325,480 275,480" fill="#e0f2fe" />
+
+    <!-- Medical Silk Tie -->
+    <polygon points="290,420 310,420 318,520 300,550 282,520" fill="url(#tieGrad)" />
+
+    <!-- White Medical Consultation Coat -->
+    <path d="M140 700 L 160 480 C 165 420, 220 395, 260 400 L 290 530 L 250 700 Z" fill="url(#coatGrad)" />
+    <path d="M460 700 L 440 480 C 435 420, 380 395, 340 400 L 310 530 L 350 700 Z" fill="url(#coatGrad)" />
+
+    <!-- Stethoscope around Neck -->
+    <!-- Tubing -->
+    <path d="M 245 420 C 240 490, 260 560, 290 570 C 310 570, 320 540, 320 520" fill="none" stroke="#334155" stroke-width="9" stroke-linecap="round" />
+    <path d="M 355 420 C 360 490, 340 545, 320 565" fill="none" stroke="#334155" stroke-width="9" stroke-linecap="round" />
+    <!-- Chestpiece / Diaphragm -->
+    <circle cx="290" cy="578" r="14" fill="#94a3b8" stroke="#cbd5e1" stroke-width="3" />
+    <circle cx="290" cy="578" r="7" fill="#64748b" />
+
+    <!-- Neck -->
+    <rect x="270" y="320" width="60" height="90" rx="10" fill="url(#skinGrad)" />
+    <!-- Chin Shadow -->
+    <ellipse cx="300" cy="335" rx="30" ry="12" fill="#b47b4d" opacity="0.4" />
+
+    <!-- Head / Face -->
+    <ellipse cx="300" cy="270" rx="72" ry="92" fill="url(#skinGrad)" />
+
+    <!-- Ears -->
+    <ellipse cx="225" cy="270" rx="12" ry="22" fill="#d49567" />
+    <ellipse cx="375" cy="270" rx="12" ry="22" fill="#d49567" />
+
+    <!-- Hair (Neat, Professional Physician Cut) -->
+    <path d="M 226 250 C 224 190, 260 160, 300 160 C 340 160, 376 190, 374 250 C 360 210, 335 195, 300 195 C 265 195, 240 210, 226 250 Z" fill="#1e293b" />
+    <path d="M 225 240 C 220 220, 230 190, 260 175 C 310 160, 355 170, 375 220 C 360 200, 325 185, 280 188 C 250 190, 230 210, 225 240 Z" fill="#0f172a" />
+
+    <!-- Well-groomed short beard / stubble shadow -->
+    <path d="M 245 285 C 255 350, 345 350, 355 285 C 340 335, 260 335, 245 285 Z" fill="#1e293b" opacity="0.35" />
+
+    <!-- Eyebrows -->
+    <path d="M 252 240 Q 272 232 288 240" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    <path d="M 312 240 Q 328 232 348 240" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+    <!-- Eyes (Friendly, caring gaze) -->
+    <ellipse cx="270" cy="254" rx="8" ry="5.5" fill="#ffffff" />
+    <circle cx="271" cy="254" r="4.2" fill="#1e293b" />
+    <circle cx="273" cy="252" r="1.5" fill="#ffffff" />
+
+    <ellipse cx="330" cy="254" rx="8" ry="5.5" fill="#ffffff" />
+    <circle cx="329" cy="254" r="4.2" fill="#1e293b" />
+    <circle cx="331" cy="252" r="1.5" fill="#ffffff" />
+
+    <!-- Spectacles / Modern Professional Glasses -->
+    <rect x="250" y="242" width="40" height="25" rx="7" fill="none" stroke="#0f172a" stroke-width="3" opacity="0.85" />
+    <rect x="310" y="242" width="40" height="25" rx="7" fill="none" stroke="#0f172a" stroke-width="3" opacity="0.85" />
+    <line x1="290" y1="252" x2="310" y2="252" stroke="#0f172a" stroke-width="3" opacity="0.85" />
+    <line x1="250" y1="250" x2="228" y2="254" stroke="#0f172a" stroke-width="2.5" opacity="0.8" />
+    <line x1="350" y1="250" x2="372" y2="254" stroke="#0f172a" stroke-width="2.5" opacity="0.8" />
+
+    <!-- Nose -->
+    <path d="M 298 250 L 296 280 Q 300 285 306 282" fill="none" stroke="#b47b4d" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Warm, reassuring smile -->
+    <path d="M 278 304 Q 300 318 322 304" fill="none" stroke="#8b4513" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Doctor Identification Badge on Coat Pocket -->
+  <g transform="translate(190, 520)">
+    <rect width="64" height="42" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#softShadow)" />
+    <rect x="6" y="8" width="16" height="20" rx="3" fill="#0d9488" />
+    <line x1="28" y1="12" x2="56" y2="12" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="28" y1="18" x2="50" y2="18" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+    <line x1="28" y1="24" x2="44" y2="24" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Live Verified Badge Chip -->
+  <g transform="translate(380, 50)">
+    <rect width="180" height="42" rx="21" fill="#ffffff" filter="url(#softShadow)" />
+    <circle cx="22" cy="21" r="8" fill="#10b981" />
+    <text x="38" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" fill="#0f766e">BM&amp;DC VERIFIED</text>
+  </g>
+</svg>
+

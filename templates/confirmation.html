@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block title %}Appointment Confirmed - {{ appointment.ref_code }} | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+
+{% block content %}
+<section class="py-12 sm:py-20 bg-slate-100 min-h-[80vh] flex items-center justify-center">
+  <div class="max-w-2xl w-full mx-auto px-4 sm:px-6">
+    
+    <!-- Printable Slip Card -->
+    <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden print-card">
+      
+      <!-- Top Success Header -->
+      <div class="bg-teal-600 text-white p-6 sm:p-8 text-center space-y-2">
+        <div class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2 text-white">
+          <i data-lucide="check-circle" class="w-8 h-8"></i>
+        </div>
+        <span class="text-xs uppercase font-extrabold tracking-wider bg-teal-800/60 px-3 py-1 rounded-full inline-block">
+          Appointment Confirmed
+        </span>
+        <h1 class="text-2xl sm:text-3xl font-extrabold">Booking Successful!</h1>
+        <p class="text-teal-100 text-xs sm:text-sm">Please save or screenshot this serial slip for your visit.</p>
+      </div>
+
+      <!-- Slip Details Body -->
+      <div class="p-6 sm:p-8 space-y-6">
+        
+        <!-- Reference Code Highlight -->
+        <div class="p-4 rounded-2xl bg-teal-50 border border-teal-200 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-3">
+          <div>
+            <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Booking Reference ID</span>
+            <div class="text-2xl sm:text-3xl font-black text-teal-900 tracking-wide font-mono mt-0.5">
+              {{ appointment.ref_code }}
+            </div>
+          </div>
+          <div class="text-xs text-teal-800 font-semibold bg-white px-3 py-1.5 rounded-xl border border-teal-200">
+            Status: <span class="text-emerald-600 font-bold">Confirmed</span>
+          </div>
+        </div>
+
+        <!-- Consultation Metadata Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="text-xs text-slate-500 font-bold uppercase block">Patient Name</span>
+            <span class="font-bold text-slate-900 text-base">{{ appointment.patient_name }}</span>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="text-xs text-slate-500 font-bold uppercase block">Contact Phone</span>
+            <span class="font-bold text-slate-900 text-base">{{ appointment.phone }}</span>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="text-xs text-slate-500 font-bold uppercase block">Scheduled Date</span>
+            <span class="font-bold text-teal-700 text-base">{{ appointment.appointment_date }}</span>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="text-xs text-slate-500 font-bold uppercase block">Time Slot</span>
+            <span class="font-bold text-teal-700 text-base">{{ appointment.time_slot }}</span>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100 sm:col-span-2">
+            <span class="text-xs text-slate-500 font-bold uppercase block">Service / Category</span>
+            <span class="font-bold text-slate-900">{{ appointment.service_type }} ({{ appointment.patient_type }})</span>
+          </div>
+        </div>
+
+        <!-- Doctor & Chamber Information -->
+        <div class="p-4 rounded-2xl border border-slate-200 space-y-2 text-xs text-slate-600">
+          <div class="flex items-center justify-between font-bold text-slate-900 text-sm">
+            <span>Dr. Tanvir Ahmed Chowdhury</span>
+            <span class="text-teal-700">BM&amp;DC: A-00000</span>
+          </div>
+          <p class="font-medium text-slate-700">MBBS, FCPS (Medicine), MD (Endocrinology)</p>
+          <div class="pt-2 border-t border-slate-100 space-y-1">
+            <p><strong>Chamber:</strong> Popular Medical Centre, Zindabazar Point, Sylhet 3100</p>
+            <p><strong>Room:</strong> 3rd Floor, Room 304</p>
+            <p><strong>Hotline:</strong> +880 1700-000000</p>
+          </div>
+        </div>
+
+        <!-- Instructions for Patient -->
+        <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 space-y-1">
+          <p class="font-bold">Important Instructions:</p>
+          <ul class="list-disc list-inside space-y-0.5 text-amber-800">
+            <li>Our assistant will call you on <strong>{{ appointment.phone }}</strong> on the appointment day to confirm serial sequence.</li>
+            <li>Please arrive 15 minutes prior to your time slot.</li>
+            <li>Bring all previous prescriptions and laboratory test records.</li>
+          </ul>
+        </div>
+
+        <!-- Actions Buttons -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center gap-3 no-print">
+          <button type="button" onclick="window.print()" class="w-full sm:w-1/2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition flex items-center justify-center gap-2">
+            <i data-lucide="printer" class="w-4 h-4"></i>
+            <span>Print Appointment Slip</span>
+          </button>
+          <a href="{{ url_for('index') }}" class="w-full sm:w-1/2 py-3 px-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm text-center transition">
+            Back to Homepage
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
+

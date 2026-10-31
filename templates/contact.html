@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Dr. Tanvir Ahmed Chowdhury | Sylhet{% endblock %}
+{% block meta_title %}Contact Dr. Tanvir Ahmed Chowdhury | Sylhet{% endblock %}
+{% block meta_description %}Contact the chamber of Dr. Tanvir Ahmed Chowdhury at Zindabazar, Sylhet for appointments and enquiries.{% endblock %}
+
+{% block content %}
+<!-- ═══ PAGE HEADER & BREADCRUMB ═══ -->
+<section class="bg-gradient-to-b from-teal-50 to-white py-10 sm:py-14 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+    <!-- Breadcrumb: Home / Contact -->
+    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500" aria-label="Breadcrumb">
+      <a href="{{ url_for('index') }}" class="hover:text-teal-600 transition flex items-center gap-1">
+        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+        <span>Home</span>
+      </a>
+      <span class="text-slate-400">/</span>
+      <span class="text-teal-700 font-bold">Contact</span>
+    </nav>
+
+    <!-- Heading & Subheading -->
+    <div class="space-y-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 text-teal-800 text-xs font-bold uppercase tracking-wider">
+        <i data-lucide="phone" class="w-4 h-4"></i>
+        <span>Reception &amp; Enquiries</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        Get in Touch
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 font-medium">
+        We are happy to help with appointments and general enquiries.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Content Grid -->
+<section class="py-14 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Column: Chamber Contact Cards -->
+      <div class="lg:col-span-5 space-y-6">
+        
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-6 shadow-sm">
+          <h2 class="text-xl font-extrabold text-slate-900">Contact Details</h2>
+          
+          <div class="space-y-5 text-sm">
+            <!-- Phone -->
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-slate-400 uppercase block">Phone</span>
+                <p class="font-extrabold text-teal-700 text-base mt-0.5">
+                  <a href="tel:+8801700000000" class="hover:underline">+880 1700-000000</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-slate-400 uppercase block">WhatsApp</span>
+                <p class="font-extrabold text-emerald-700 text-base mt-0.5">
+                  <a href="https://wa.me/8801700000000" target="_blank" rel="noopener noreferrer" class="hover:underline">+880 1700-000000</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-slate-400 uppercase block">Email</span>
+                <p class="font-semibold text-slate-900 mt-0.5">
+                  <a href="mailto:appointments@drtanvirahmed.com" class="hover:underline text-teal-700">appointments@drtanvirahmed.com</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-slate-400 uppercase block">Address</span>
+                <p class="font-bold text-slate-900 mt-0.5">
+                  Popular Medical Centre, Zindabazar Point, Sylhet 3100
+                </p>
+              </div>
+            </div>
+
+            <!-- Phone Hours -->
+            <div class="pt-3 border-t border-slate-200 flex items-start gap-3 text-xs text-slate-600">
+              <i data-lucide="clock" class="w-4 h-4 text-teal-600 shrink-0 mt-0.5"></i>
+              <span><strong>Phone Hours:</strong> Saturday - Thursday, 10:00 AM - 8:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Appointment Shortcut Box -->
+        <div class="p-6 rounded-2xl bg-teal-50 border border-teal-100 space-y-3">
+          <h3 class="text-sm font-bold text-teal-900">Need a quick appointment serial?</h3>
+          <p class="text-xs text-slate-600">You can easily reserve an appointment slot online in just a minute.</p>
+          <button type="button" class="open-booking-modal-btn w-full py-3 px-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Book Appointment Online</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Send Us a Message Form -->
+      <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm space-y-6">
+        <div class="space-y-1">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Send Us a Message</h2>
+          <p class="text-sm text-slate-600">Feel free to ask about consultation schedules, reports, or directions.</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="p-4 rounded-xl {% if category == 'success' %}bg-emerald-50 text-emerald-800 border border-emerald-200{% else %}bg-rose-50 text-rose-800 border border-rose-200{% endif %} text-xs font-semibold">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('contact_submit') }}" method="POST" class="space-y-4">
+          <!-- Full Name -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Full Name *</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                <i data-lucide="user" class="w-4 h-4"></i>
+              </span>
+              <input type="text" name="name" required placeholder="e.g. Md. Abdul Karim" class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+            </div>
+          </div>
+
+          <!-- Phone Number & Email (optional) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Phone Number *</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                  <i data-lucide="phone" class="w-4 h-4"></i>
+                </span>
+                <input type="tel" name="phone" required placeholder="017XX-XXXXXX" class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Email (Optional)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                </span>
+                <input type="email" name="email" placeholder="name@example.com" class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+              </div>
+            </div>
+          </div>
+
+          <!-- Subject -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Subject *</label>
+            <input type="text" name="subject" required placeholder="e.g. Appointment enquiry or report question" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Message *</label>
+            <textarea name="message" rows="4" required placeholder="Please write your message or enquiry here..." class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500 outline-none"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-2">
+            <button type="submit" class="w-full py-4 px-6 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-teal-glow transition flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Send Message</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- ═══ EMERGENCY NOTE BANNER ═══ -->
+    <div class="p-6 sm:p-7 rounded-3xl bg-rose-50 border-2 border-rose-200 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+      <div class="w-12 h-12 rounded-2xl bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-md">
+        <i data-lucide="alert-octagon" class="w-7 h-7"></i>
+      </div>
+      <div class="space-y-0.5">
+        <span class="text-xs font-extrabold text-rose-800 uppercase tracking-wider block">Medical Emergency Notice</span>
+        <p class="text-sm text-rose-900 font-semibold leading-relaxed">
+          For medical emergencies, please do not use this form. Go to the nearest hospital emergency department or call 999 immediately.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

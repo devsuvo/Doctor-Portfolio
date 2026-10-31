@@ -1,0 +1,462 @@
+{% extends 'base.html' %}
+
+{% block title %}Medical Services | Diabetes, Thyroid & Hypertension Care in Sylhet{% endblock %}
+{% block meta_title %}Medical Services | Diabetes, Thyroid & Hypertension Care in Sylhet{% endblock %}
+{% block meta_description %}Explore services offered by Dr. Tanvir Ahmed Chowdhury including diabetes care, thyroid treatment, hypertension, weight management and health check-ups.{% endblock %}
+
+{% block content %}
+<!-- ═══ PAGE HEADER & BREADCRUMB ═══ -->
+<section class="bg-gradient-to-b from-teal-50 to-white py-10 sm:py-14 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+    <!-- Breadcrumb: Home / Services -->
+    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500" aria-label="Breadcrumb">
+      <a href="{{ url_for('index') }}" class="hover:text-teal-600 transition flex items-center gap-1">
+        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+        <span>Home</span>
+      </a>
+      <span class="text-slate-400">/</span>
+      <span class="text-teal-700 font-bold">Services</span>
+    </nav>
+
+    <!-- Heading & Subheading -->
+    <div class="space-y-2">
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        Our Medical Services
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 font-medium">
+        Comprehensive, personalized care for you and your family.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE CARDS SECTION ═══ -->
+<section class="py-14 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      
+      <!-- Card 1: Diabetes Management -->
+      <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center">
+            <i data-lucide="activity" class="w-7 h-7"></i>
+          </div>
+          <h2 class="text-xl font-bold text-slate-900">1. Diabetes Management</h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Personalized care plans for Type 1, Type 2 and gestational diabetes, including diet guidance and insulin management.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-200/80 mt-6 flex items-center justify-between">
+          <a href="{{ url_for('service_diabetes') }}" class="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 hover:text-teal-900 transition">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+          <button type="button" data-service="Diabetes Management" class="open-booking-modal-btn px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition">
+            Book Slot
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: Thyroid Disorders -->
+      <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center">
+            <i data-lucide="shield-plus" class="w-7 h-7"></i>
+          </div>
+          <h2 class="text-xl font-bold text-slate-900">2. Thyroid Disorders</h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Diagnosis and long-term treatment of hypothyroidism, hyperthyroidism and thyroid nodules.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-200/80 mt-6 flex items-center justify-between">
+          <a href="{{ url_for('service_thyroid') }}" class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:text-sky-900 transition">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+          <button type="button" data-service="Thyroid Disorders" class="open-booking-modal-btn px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition">
+            Book Slot
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Hypertension & Heart Health -->
+      <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center">
+            <i data-lucide="heart" class="w-7 h-7"></i>
+          </div>
+          <h2 class="text-xl font-bold text-slate-900">3. Hypertension &amp; Heart Health</h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Blood pressure control, risk assessment and preventive care to protect your heart.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-200/80 mt-6 flex items-center justify-between">
+          <a href="{{ url_for('service_hypertension') }}" class="inline-flex items-center gap-1.5 text-xs font-bold text-rose-700 hover:text-rose-900 transition">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+          <button type="button" data-service="Hypertension & Heart Health" class="open-booking-modal-btn px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition">
+            Book Slot
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4: Obesity & Weight Management -->
+      <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+            <i data-lucide="scale" class="w-7 h-7"></i>
+          </div>
+          <h2 class="text-xl font-bold text-slate-900">4. Obesity &amp; Weight Management</h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Medically supervised weight loss programs built around metabolic health.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-200/80 mt-6 flex items-center justify-between">
+          <a href="{{ url_for('service_obesity') }}" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-900 transition">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+          <button type="button" data-service="Obesity & Weight Management" class="open-booking-modal-btn px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition">
+            Book Slot
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 5: General Medicine -->
+      <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center">
+            <i data-lucide="stethoscope" class="w-7 h-7"></i>
+          </div>
+          <h2 class="text-xl font-bold text-slate-900">5. General Medicine</h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Diagnosis and treatment of fever, infections, gastric problems, respiratory illness, joint pain and more.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-200/80 mt-6 flex items-center justify-between">
+          <button type="button" onclick="openServiceDetail('general-detail')" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-900 transition">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+          <button type="button" data-service="General Medicine" class="open-booking-modal-btn px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition">
+            Book Slot
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 6: Preventive Health Check-up -->
+      <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
+            <i data-lucide="clipboard-check" class="w-7 h-7"></i>
+          </div>
+          <h2 class="text-xl font-bold text-slate-900">6. Preventive Health Check-up</h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Complete health screening packages for early detection and peace of mind.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-200/80 mt-6 flex items-center justify-between">
+          <a href="#health-packages" class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 hover:text-indigo-900 transition">
+            <span>View Packages</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+          <button type="button" data-service="Preventive Health Check-up" class="open-booking-modal-btn px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition">
+            Book Slot
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ HEALTH PACKAGES SECTION ═══ -->
+<section id="health-packages" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <div class="text-center max-w-2xl mx-auto space-y-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 text-teal-800 text-xs font-bold uppercase tracking-wider">
+        <i data-lucide="shield-check" class="w-4 h-4"></i>
+        <span>Preventive Screening</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Health Check-up Packages
+      </h2>
+      <p class="text-base text-slate-600">
+        Structured wellness packages designed for proactive detection of metabolic and cardiovascular risks.
+      </p>
+    </div>
+
+    <!-- 3 Package Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Package 1: Basic Check-up -->
+      <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover-lift">
+        <div class="space-y-4">
+          <div class="inline-block px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-bold uppercase">
+            Essential Care
+          </div>
+          <h3 class="text-2xl font-extrabold text-slate-900">Basic Check-up</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Blood pressure, blood sugar, BMI, general physical examination.
+          </p>
+          <div class="pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-700">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>Blood Pressure Screening</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>Random/Fasting Blood Sugar</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>BMI &amp; Body Composition</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>General Physical Examination</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6 mt-6 border-t border-slate-100">
+          <button type="button" data-service="Preventive Health Check-up" class="open-booking-modal-btn w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition">
+            Book Basic Check-up
+          </button>
+        </div>
+      </div>
+
+      <!-- Package 2: Diabetes Check-up -->
+      <div class="bg-white rounded-3xl p-8 border-2 border-teal-600 shadow-md flex flex-col justify-between hover-lift relative">
+        <div class="absolute -top-3.5 right-6 px-3 py-0.5 rounded-full bg-teal-600 text-white text-[11px] font-extrabold tracking-wide uppercase">
+          Most Popular
+        </div>
+        <div class="space-y-4">
+          <div class="inline-block px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-bold uppercase">
+            Targeted Care
+          </div>
+          <h3 class="text-2xl font-extrabold text-slate-900">Diabetes Check-up</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Blood sugar profile, HbA1c, kidney function, eye and foot risk screening.
+          </p>
+          <div class="pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-700">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>Complete Blood Sugar Profile</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>HbA1c Glycated Hemoglobin</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>Serum Creatinine &amp; Kidney Screen</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>Diabetic Eye &amp; Foot Neuropathy Check</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6 mt-6 border-t border-slate-100">
+          <button type="button" data-service="Diabetes Management" class="open-booking-modal-btn w-full py-3 px-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs shadow-md transition">
+            Book Diabetes Check-up
+          </button>
+        </div>
+      </div>
+
+      <!-- Package 3: Complete Check-up -->
+      <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover-lift">
+        <div class="space-y-4">
+          <div class="inline-block px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase">
+            Comprehensive
+          </div>
+          <h3 class="text-2xl font-extrabold text-slate-900">Complete Check-up</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Full blood count, lipid profile, liver and kidney function, thyroid profile, ECG, and doctor consultation.
+          </p>
+          <div class="pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-700">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>Full Blood Count (CBC)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>Complete Lipid Profile (Cholesterol/TG)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>Liver &amp; Kidney Function Panels</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>Thyroid Profile (TSH) &amp; 12-Lead ECG</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+              <span>Personal Doctor Consultation</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6 mt-6 border-t border-slate-100">
+          <button type="button" data-service="Preventive Health Check-up" class="open-booking-modal-btn w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition">
+            Book Complete Check-up
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Package Note from Prompt -->
+    <div class="p-4 rounded-2xl bg-teal-50 border border-teal-200 text-center max-w-2xl mx-auto">
+      <p class="text-xs text-slate-700 font-semibold flex items-center justify-center gap-2">
+        <i data-lucide="info" class="w-4 h-4 text-teal-700 shrink-0"></i>
+        <span>Note: Package details and pricing are available at the chamber.</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CTA SECTION ═══ -->
+<section class="py-16 sm:py-20 bg-teal-800 text-white text-center">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+      Not sure which service you need?
+    </h2>
+    <p class="text-teal-100 text-base sm:text-lg max-w-xl mx-auto">
+      Book a consultation and Dr. Tanvir will guide you.
+    </p>
+    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <button type="button" class="open-booking-modal-btn w-full sm:w-auto px-9 py-4 rounded-2xl bg-white text-teal-900 font-extrabold text-base shadow-xl hover:bg-teal-50 transition transform active:scale-95">
+        <i data-lucide="calendar-check" class="w-5 h-5 inline-block mr-1 text-teal-700"></i>
+        <span>Book Appointment</span>
+      </button>
+      <a href="tel:+8801700000000" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-teal-900/80 hover:bg-teal-900 text-white font-bold text-base border border-teal-400/30 transition">
+        <i data-lucide="phone-call" class="w-5 h-5 inline-block mr-1"></i>
+        <span>Call Hotline</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LEARN MORE DETAILS MODAL ═══ -->
+<div id="service-detail-modal" class="fixed inset-0 z-50 hidden modal-backdrop items-center justify-center p-4 overflow-y-auto no-print">
+  <div class="bg-white rounded-3xl shadow-2xl max-w-xl w-full p-6 sm:p-8 relative my-8">
+    <button type="button" onclick="closeServiceDetail()" class="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100">
+      <i data-lucide="x" class="w-5 h-5"></i>
+    </button>
+    <div id="service-detail-content"></div>
+  </div>
+</div>
+
+<script>
+const serviceDetailsData = {
+  'diabetes-detail': {
+    title: 'Diabetes Management',
+    desc: 'Personalized care plans for Type 1, Type 2 and gestational diabetes, including diet guidance and insulin management.',
+    approach: [
+      'Tailored target HbA1c roadmap based on age and lifestyle',
+      'Continuous blood glucose tracking and insulin titration',
+      'Bangladeshi-adapted dietary exchange plan (rice, carbohydrates, proteins)',
+      'Early complication screening: Neuropathy, Retinopathy, Nephropathy'
+    ],
+    serviceName: 'Diabetes Management'
+  },
+  'thyroid-detail': {
+    title: 'Thyroid Disorders',
+    desc: 'Diagnosis and long-term treatment of hypothyroidism, hyperthyroidism and thyroid nodules.',
+    approach: [
+      'Precision TSH, Free T3, and Free T4 interpretation',
+      'Optimal Levothyroxine micro-dosing and weight balance',
+      'Management of thyroid disorders in pregnancy',
+      'Thyroid ultrasound correlation and goiter follow-up'
+    ],
+    serviceName: 'Thyroid Disorders'
+  },
+  'hypertension-detail': {
+    title: 'Hypertension & Heart Health',
+    desc: 'Blood pressure control, risk assessment and preventive care to protect your heart.',
+    approach: [
+      'Home vs chamber blood pressure validation to detect white-coat effect',
+      'Cardiovascular 10-year risk stratification (ASCVD)',
+      'DASH nutritional strategy with sodium reduction guidance',
+      'Target organ protection (kidneys, coronary arteries, brain)'
+    ],
+    serviceName: 'Hypertension & Heart Health'
+  },
+  'obesity-detail': {
+    title: 'Obesity & Weight Management',
+    desc: 'Medically supervised weight loss programs built around metabolic health.',
+    approach: [
+      'Comprehensive endocrine evaluation for insulin resistance and hormonal causes',
+      'Metabolic fatty liver disease (NAFLD) management',
+      'Sustainable nutritional plans without aggressive muscle loss',
+      'Long-term behavioral and metabolic weight stability'
+    ],
+    serviceName: 'Obesity & Weight Management'
+  },
+  'general-detail': {
+    title: 'General Medicine',
+    desc: 'Diagnosis and treatment of fever, infections, gastric problems, respiratory illness, joint pain and more.',
+    approach: [
+      'Accurate clinical diagnosis with evidence-based minimal testing',
+      'Rational antibiotic stewardship to avoid antimicrobial resistance',
+      'Management of acid-peptic disease, IBS, and chronic fatigue',
+      'Geriatric polypharmacy and multi-system medication reviews'
+    ],
+    serviceName: 'General Medicine'
+  }
+};
+
+function openServiceDetail(key) {
+  const item = serviceDetailsData[key];
+  if (!item) return;
+
+  const content = document.getElementById('service-detail-content');
+  content.innerHTML = `
+    <div class="space-y-4">
+      <div class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center">
+        <i data-lucide="activity" class="w-6 h-6"></i>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-slate-900">${item.title}</h3>
+        <p class="text-sm text-slate-600 mt-1 leading-relaxed">${item.desc}</p>
+      </div>
+      <div class="pt-4 border-t border-slate-100 space-y-2">
+        <span class="text-xs font-bold text-teal-800 uppercase tracking-wider block">Clinical Protocols:</span>
+        <ul class="text-xs text-slate-700 space-y-1.5">
+          ${item.approach.map(pt => `<li class="flex items-start gap-2"><span class="text-teal-600 font-bold">•</span><span>${pt}</span></li>`).join('')}
+        </ul>
+      </div>
+      <div class="pt-4">
+        <button type="button" onclick="closeServiceDetail(); document.querySelector('.open-booking-modal-btn[data-service=\\'${item.serviceName}\\']')?.click();" class="w-full py-3 px-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-md transition">
+          Book Appointment for ${item.title}
+        </button>
+      </div>
+    </div>
+  `;
+  if (window.lucide) window.lucide.createIcons();
+
+  const modal = document.getElementById('service-detail-modal');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
+
+function closeServiceDetail() {
+  const modal = document.getElementById('service-detail-modal');
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+}
+
+document.getElementById('service-detail-modal')?.addEventListener('click', (e) => {
+  if (e.target.id === 'service-detail-modal') {
+    closeServiceDetail();
+  }
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ article.title }} | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_title %}{{ article.title }} | Dr. Tanvir Ahmed Chowdhury{% endblock %}
+{% block meta_description %}{{ article.excerpt }}{% endblock %}
+
+{% block content %}
+<!-- Article Header -->
+<article class="py-12 sm:py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    
+    <!-- Breadcrumb -->
+    <div class="flex items-center gap-2 text-xs font-semibold text-slate-500">
+      <a href="{{ url_for('index') }}" class="hover:text-teal-600">Home</a>
+      <span>/</span>
+      <a href="{{ url_for('health_tips') }}" class="hover:text-teal-600">Health Tips</a>
+      <span>/</span>
+      <span class="text-teal-700">{{ article.category }}</span>
+    </div>
+
+    <!-- Title and Metadata -->
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-bold">
+        <span>{{ article.category }}</span>
+        <span>•</span>
+        <span>{{ article.read_time }}</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        {{ article.title }}
+      </h1>
+      <div class="flex items-center gap-4 text-xs sm:text-sm text-slate-500 pt-2 border-b border-slate-100 pb-6">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-xs">
+            TA
+          </div>
+          <span class="font-bold text-slate-900">{{ article.author }}</span>
+        </div>
+        <span>•</span>
+        <span>Published: {{ article.published_date }}</span>
+      </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="prose prose-slate max-w-none text-slate-700 leading-relaxed space-y-6 text-base sm:text-lg">
+      <div class="p-5 rounded-2xl bg-teal-50/80 border border-teal-100 font-medium text-slate-800 text-base leading-relaxed">
+        {{ article.excerpt }}
+      </div>
+      
+      <div class="article-body-content space-y-4 leading-relaxed text-slate-700">
+        {{ article.content | render_markdown | safe }}
+      </div>
+    </div>
+
+    <!-- Doctor Author Card at End of Article -->
+    <div class="mt-12 p-8 rounded-3xl bg-slate-50 border border-slate-200 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+      <div class="sm:col-span-3 flex justify-center">
+        <div class="w-24 h-24 rounded-2xl overflow-hidden bg-teal-600 p-1 shadow-md">
+          <img src="{{ url_for('static', filename='images/doctor-portrait.svg') }}" alt="Dr. Tanvir Ahmed Chowdhury" class="w-full h-full object-cover rounded-xl">
+        </div>
+      </div>
+      <div class="sm:col-span-9 space-y-2 text-center sm:text-left">
+        <h3 class="text-lg font-bold text-slate-900">Dr. Tanvir Ahmed Chowdhury</h3>
+        <p class="text-xs text-teal-700 font-bold">Consultant Physician &amp; Endocrinologist</p>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          MBBS, FCPS (Medicine), MD (Endocrinology). Practicing at Popular Medical Centre, Zindabazar Point, Sylhet. Dedicated to evidence-based care in diabetes, thyroid disorders, and hypertension.
+        </p>
+        <div class="pt-2">
+          <button type="button" class="open-booking-modal-btn px-5 py-2.5 rounded-xl bg-teal-600 text-white text-xs font-bold hover:bg-teal-700 transition">
+            Book Consultation with Dr. Tanvir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Articles Button -->
+    <div class="pt-6 text-center">
+      <a href="{{ url_for('health_tips') }}" class="inline-flex items-center gap-2 text-sm font-bold text-teal-700 hover:text-teal-900">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Back to All Health Tips</span>
+      </a>
+    </div>
+
+  </div>
+</article>
+{% endblock %}
+

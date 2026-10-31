@@ -1,0 +1,336 @@
+{% extends 'base.html' %}
+
+{% block title %}About Dr. Tanvir Ahmed Chowdhury | Consultant Physician, Sylhet{% endblock %}
+{% block meta_title %}About Dr. Tanvir Ahmed Chowdhury | Consultant Physician, Sylhet{% endblock %}
+{% block meta_description %}Learn about Dr. Tanvir Ahmed Chowdhury's education, experience and approach to patient care in diabetes, thyroid and general medicine.{% endblock %}
+
+{% block content %}
+<!-- ═══ PAGE HEADER & BREADCRUMB ═══ -->
+<section class="bg-gradient-to-b from-teal-50 to-white py-10 sm:py-14 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+    <!-- Breadcrumb: Home / About -->
+    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500" aria-label="Breadcrumb">
+      <a href="{{ url_for('index') }}" class="hover:text-teal-600 transition flex items-center gap-1">
+        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+        <span>Home</span>
+      </a>
+      <span class="text-slate-400">/</span>
+      <span class="text-teal-700 font-bold">About</span>
+    </nav>
+
+    <!-- Heading: About Dr. Tanvir -->
+    <div class="space-y-2">
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        About Dr. Tanvir
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 font-medium">
+        Consultant Physician &amp; Endocrinologist • Sylhet, Bangladesh
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INTRO SECTION ═══ -->
+<section class="py-14 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Doctor Portrait Card -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative w-full max-w-md">
+          <div class="absolute inset-0 bg-teal-600/10 rounded-3xl transform rotate-2 scale-105 filter blur-xl"></div>
+          <div class="relative bg-white rounded-3xl p-4 shadow-xl border border-slate-100 space-y-4">
+            <img src="{{ url_for('static', filename='images/doctor-portrait.svg') }}" alt="Dr. Tanvir Ahmed Chowdhury" class="w-full h-auto rounded-2xl shadow-sm aspect-[6/7] object-cover">
+            
+            <div class="p-3 bg-teal-50 rounded-2xl border border-teal-100 space-y-1">
+              <h3 class="font-extrabold text-slate-900 text-sm">Dr. Tanvir Ahmed Chowdhury</h3>
+              <p class="text-xs text-teal-800 font-bold">MBBS, FCPS (Medicine), MD (Endocrinology)</p>
+              <p class="text-[11px] text-slate-500">BM&amp;DC Reg. No: <strong>A-00000</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intro Text Column -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 text-teal-800 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="user-check" class="w-4 h-4"></i>
+          <span>Physician Profile</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Meet Dr. Tanvir Ahmed Chowdhury
+        </h2>
+
+        <div class="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+          <p>
+            Dr. Tanvir Ahmed Chowdhury is a Consultant Physician and Endocrinologist based in Sylhet. He completed his MBBS from Sylhet MAG Osmani Medical College and went on to earn his FCPS in Medicine, followed by an MD in Endocrinology from BSMMU, Dhaka.
+          </p>
+          <p>
+            With more than a decade of clinical experience, he focuses on the long-term management of diabetes, thyroid disorders, hypertension and lifestyle-related diseases.
+          </p>
+          <p>
+            His approach is simple: listen carefully, explain clearly, and treat with evidence-based care. Every consultation is unhurried, personal and focused on lasting results.
+          </p>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <button type="button" class="open-booking-modal-btn inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-teal-glow transition">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Book Appointment</span>
+          </button>
+          <a href="tel:+8801700000000" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm transition">
+            <i data-lucide="phone-call" class="w-4 h-4 text-teal-600"></i>
+            <span>Call: +880 1700-000000</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HIGHLIGHTS STRIP ═══ -->
+<section class="py-10 bg-slate-50 border-y border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+          <i data-lucide="clock" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="text-2xl font-extrabold text-slate-900">12+ Years</div>
+          <p class="text-xs text-slate-600 font-medium">Clinical experience</p>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+          <i data-lucide="users" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="text-2xl font-extrabold text-slate-900">15,000+</div>
+          <p class="text-xs text-slate-600 font-medium">Patients treated</p>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+          <i data-lucide="book-marked" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="text-2xl font-extrabold text-slate-900">8+ Papers</div>
+          <p class="text-xs text-slate-600 font-medium">National &amp; intl journals</p>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+          <i data-lucide="mic" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="text-2xl font-extrabold text-slate-900">Speaker</div>
+          <p class="text-xs text-slate-600 font-medium">Seminars &amp; awareness programs</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PHILOSOPHY: MY APPROACH TO CARE ═══ -->
+<section class="py-16 sm:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-3 mb-14">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 text-teal-800 text-xs font-bold uppercase tracking-wider">
+        <i data-lucide="heart" class="w-4 h-4"></i>
+        <span>Clinical Principles</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        My Approach to Care
+      </h2>
+      <p class="text-base text-slate-600">
+        Centering patient health around four core foundations for durable clinical outcomes.
+      </p>
+    </div>
+
+    <!-- 4 Philosophy Points Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- 1. Listen First -->
+      <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-teal-600 text-white font-extrabold text-lg flex items-center justify-center shadow-md shadow-teal-600/20">
+            1
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Listen First</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Good treatment begins with understanding the patient's story.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. Explain Clearly -->
+      <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-teal-600 text-white font-extrabold text-lg flex items-center justify-center shadow-md shadow-teal-600/20">
+            2
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Explain Clearly</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Patients should understand their condition and their medicines.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Treat Responsibly -->
+      <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-teal-600 text-white font-extrabold text-lg flex items-center justify-center shadow-md shadow-teal-600/20">
+            3
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Treat Responsibly</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Only necessary tests and medicines, based on evidence.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. Follow Through -->
+      <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:bg-white hover:border-teal-300 transition hover-lift flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-teal-600 text-white font-extrabold text-lg flex items-center justify-center shadow-md shadow-teal-600/20">
+            4
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Follow Through</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Care continues after the consultation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTE SECTION ═══ -->
+<section class="py-14 sm:py-20 bg-teal-900 text-white relative overflow-hidden">
+  <div class="absolute -top-16 -left-16 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-16 -right-16 w-64 h-64 bg-teal-400/10 rounded-full blur-3xl"></div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+    <div class="w-14 h-14 rounded-full bg-teal-800/80 text-teal-300 flex items-center justify-center mx-auto text-3xl font-serif">
+      “
+    </div>
+    
+    <!-- Exact Quote from User -->
+    <blockquote class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-snug">
+      "A good doctor treats the disease. A great doctor listens to the patient who has the disease."
+    </blockquote>
+
+    <div class="pt-2">
+      <cite class="not-italic text-sm sm:text-base font-semibold text-teal-300 block">
+        — Dr. Tanvir Ahmed Chowdhury
+      </cite>
+      <span class="text-xs text-teal-100/70">Consultant Physician &amp; Endocrinologist, Sylhet</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ACHIEVEMENTS: RECOGNITION & CONTRIBUTION ═══ -->
+<section class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    
+    <div class="text-center space-y-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 text-teal-800 text-xs font-bold uppercase tracking-wider">
+        <i data-lucide="award" class="w-4 h-4"></i>
+        <span>Professional Impact</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Recognition &amp; Contribution
+      </h2>
+      <p class="text-slate-600 text-base max-w-2xl mx-auto">
+        Dedicated to academic scientific advancement, public health education, and community healthcare initiatives.
+      </p>
+    </div>
+
+    <!-- 4 Achievements Points from User Prompt -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4 hover-lift">
+        <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
+          <i data-lucide="file-text" class="w-5 h-5"></i>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-bold text-slate-900 text-base">Published Researcher</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Published researcher on diabetes management in South Asian patients.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4 hover-lift">
+        <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
+          <i data-lucide="presentation" class="w-5 h-5"></i>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-bold text-slate-900 text-base">Resource Speaker</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Resource speaker, National Diabetes Awareness Seminars.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4 hover-lift">
+        <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-bold text-slate-900 text-base">Medical Association Member</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Active member of leading medical associations in Bangladesh.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4 hover-lift">
+        <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
+          <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+        </div>
+        <div class="space-y-1">
+          <h3 class="font-bold text-slate-900 text-base">Community Volunteer</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Volunteer in free health camps across Sylhet division.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CTA SECTION ═══ -->
+<section class="py-16 sm:py-20 bg-gradient-to-r from-teal-800 to-teal-900 text-white text-center">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+      Ready to meet the doctor?
+    </h2>
+    <p class="text-teal-100 text-base sm:text-lg max-w-xl mx-auto">
+      Experience attentive, unhurried consultations at Popular Medical Centre, Zindabazar, Sylhet.
+    </p>
+    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <button type="button" class="open-booking-modal-btn w-full sm:w-auto px-9 py-4 rounded-2xl bg-white text-teal-900 font-extrabold text-base shadow-2xl hover:bg-teal-50 transition transform active:scale-95">
+        <i data-lucide="calendar-check" class="w-5 h-5 inline-block mr-1 text-teal-700"></i>
+        <span>Book Appointment</span>
+      </button>
+      <a href="tel:+8801700000000" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-teal-950/60 hover:bg-teal-950/90 text-white font-bold text-base border border-teal-500/40 transition">
+        <i data-lucide="phone-call" class="w-5 h-5 inline-block mr-1"></i>
+        <span>Call Now</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
